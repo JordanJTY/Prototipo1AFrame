@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Historia Viva de Casco de La Villa de Agüimes</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <meta name="description" content="A-Frame Examples">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/components/play_video.js"></script>
+    <script src="js/components/my_opacity.js"></script>
+    <script src="js/components/my_color.js"></script>
+    <script src="js/components/my_roughness.js"></script>
+    <script src="js/components/my_wireframe.js"></script>
+    <script src="js/my_menu.js"></script>
+    <script src="js/change_scene.js"></script>
+    <script src="js/components/go_exit.js"></script>
+    <script src="js/components/show_menu.js"></script>
+</head>
+
+<body>
+    <div class="button-container">
+        <button id="speaker-button">
+            <img id="speaker-img" src="img/sound_off.png" alt="texture">
+        </button>
+        <button id="button-sh" type="button" onclick="fun()"><img class="changerImg" src="img/show.png"
+                alt="show.png"></button>
+        <button id="button-sh2" style="display: none;" type="button" onclick="fun2()"><img class="changerImg"
+                src="img/hide.png" alt="hide.png"></button>
+    </div>
+    <div class="my-container" id="my-menu">
+        <label for="opacity" class="form-label">Opacity:</label>
+        <input type="range" class="form-range" id="opacity" name="opacity" min="0" max="1" value="0" step="0.1">
+
+        <label for="roughness" class="form-label">Roughness:</label>
+        <input type="range" class="form-range" id="roughness" name="roughness" min="0" max="1" value="0" step="0.1">
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color" value="#ff0000">
+
+        <div class="wireframe">
+            <label class="switch">
+                <input type="checkbox" id="wireframe" checked>
+                <span class="slider round"></span>
+            </label>
+            Wireframe
+        </div>
+    </div>
+
+    <a-scene cursor="rayOrigin: mouse;" raycaster="far: 100; objects: [link];">
+        <a-camera>
+            <a-cursor raycaster="objects: .clickable"></a-cursor>
+        </a-camera>
+
+        <a-assets>
+            <audio id="audio" src="mp3/lofi_sound.mp3"></audio>
+            <img id="cuadritos" src="img/cuadritos.jpg" alt="Cuadritos.jpg">
+            <img id="preview-pan-puno" src="img/homenaje_al_pan_de_puno.jpg" alt="Homenaje-pan-puño">
+            <img id="preview-agricultor" src="img/homenaje_al_agricultor_y_al_regante.jpg" alt="Homenaje-agricultor">
+            <img id="preview-enamorados" src="img/homenaje_a_los_enamorados.jpg" alt="Homenajes-enamorados">
+            <img id="preview-camellos" src="img/casa_de_los_camellos.jpg" alt="Casa-de-los-camellos">
+            <img id="preview-burro-algaba" src="img/burro_con_algaba.jpg" alt="burro-con-algaba">
+            <img id="preview-agraria" src="img/actividad_agraria.jpg" alt="Actividad-agraria.jpg">
+            <img id="preview-start" src="img/lobby.jpg" alt="lobby.jpg">
+        </a-assets>
+        <a-box id="my-box" class="clickable" material="src: #cuadritos" my-color="color: #ff0000;"
+            my-opacity="opacity: 1;" position="0 0.4 15" scale="2 2 2" rotation="0 45 10"
+            my-wireframe="wireframe: false"
+            animation="property: rotation; to: 0 360 180; dir: alternate; loop: true; dur: 5000" go-exit>
+        </a-box>
+
+        <a-text value="Exit" material="color: white" width="20" height="15" position="0 2.5 15" rotation="0 180 0"
+            align="center">
+            <a-plane material="color: black; side: double" width="2" height="1"></a-plane>
+        </a-text>
+
+        <a-sky id="my-sky" material="src: #preview-burro-algaba" sound="src: #audio; loop: true" data-sounding="false">
+        </a-sky>
+
+        <a-sphere id="origin" radius="0.25" position="0 0 0" color="white"></a-sphere>
+        <a-entity id="capa" visible="false">
+            <a-link position="-5.5 1.6 -4" rotation="0 40 0" href="panPuno.html" title="Homenaje al Pan de Puno"
+                image="#preview-pan-puno"></a-link>
+
+            <a-link position="-2.5 1.6 -5" rotation="0 20 0" href="homenajeAgricultor.html"
+                title="Homenaje al agricultor" image="#preview-agricultor"></a-link>
+
+            <a-link position="0 1.6 -6" href="homenajeEnamorados.html" title="Homenaje a los enamorados"
+                image="#preview-enamorados"></a-link>
+
+            <a-link position="2.5 1.6 -5" rotation="0 -20 0" href="casaCamellos.html" title="Casa de los camellos"
+                image="#preview-camellos"></a-link>
+
+            <a-link position="5.5 1.6 -4" rotation="0 -40 0" href="actividadAgraria.html" title="Actividad agraria"
+                image="#preview-agraria"></a-link>
+
+            <a-link position="0 4.2 -6" href="start.html" title="Inicio" image="#preview-start"></a-link>
+        </a-entity>
+    </a-scene>
+    <script src="js/components/ambient_sound.js"></script>
+</body>
+
+</html>

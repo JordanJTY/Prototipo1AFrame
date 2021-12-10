@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabios Guías intérpretes</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/components/draw_canvas.js"></script>
+</head>
+
+<body>
+    <!--Barra Scrollspy con Dropdown-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.sabiosguiasinterpretes.com/">
+                <img src="img/sabios_guias_interpretes.png" alt="Avatar Logo" style="width:100px;" class="rounded-pill">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section1">Descripción</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3">¡Contáctanos!</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">¡Únete a
+                            nosotros!</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="singIn.html">Registrarse</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Foto inicial con efecto paralax-->
+    <div class="block parallax image1">
+        <div class="container paral">
+        </div>
+    </div>
+
+    <!--Descripción de la página web-->
+    <div id="section1" class="container-fluid" style="padding: 90px 20px;">
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Acerca de nosotros</h2>
+                    <p></p>
+                </div>
+
+                <div class="row content">
+                    <div class="col-lg-6">
+                        <p>
+                            Nosotros somos una compañía que se dedica a mostrar las rutas más emblemáticas de las Islas
+                            Canarias. En este caso, les mostraremos
+                            la ruta de la Villa de Agüimes. Estas rutas pueden llevarse a cabo de diferentes maneras:
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> De manera presencial, donde un guía os lleva por
+                                los lugares y os explica su pasado</li>
+                            <li><i class="ri-check-double-line"></i> En esta misma web, donde se os explica y se os
+                                muestra todo.</li>
+                            <li><i class="ri-check-double-line"></i> De manera VR, al cual nos hemos estado dedicando
+                                para llegar a todos.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <p>
+                            Nuestro entorno VR ha sido desarrollado por los estudiantes de IES El Rincón, tras un largo
+                            esfuerzo y dedicación por parte
+                            de los alumnos, podeis disfrutar del increíble VR del cual se puede acceder desde el
+                            siguiente botón.
+                        </p>
+                        <a href="start.html" class="btn btn-primary">Entrar en la ruta VR</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!--Galeria de imágenes-->
+    <div id="section2" class="container-fluid text-black" style="padding:100px 20px;">
+        <div class="container">
+            <!--Fila de imagenes del inicio de la galeria-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/iglesia_aguimes.jpg"
+                            alt="camellos.jpg"/>
+
+                        <div class="card-body">
+                            <p class="card-text">Agüimes tiene más que mostrar, además de lo mostrado en esta ruta.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/mapa_aguimes.PNG"
+                            alt="mapa_aguimes.png" />
+
+                        <div class="card-body">
+                            <p class="card-text">En este mapa mostramos el lugar por donde podríamos hacer la ruta
+                                de la Historia Viva de la Villa de Agüimes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/cruz_aguimes.jpg"
+                            alt="cruz_aguimes.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">Agüimes tiene más que mostrar, además de lo mostrado en esta ruta.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Segunda fila de la galeria, empiezan las fotos del mismo VR-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <!--Columna de los enamorados-->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/enamorados.jpg"
+                            alt="enamorados.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">La Villa de Agüimes fue fundada por los Reyes Católicos siendo un
+                                lugar
+                                donde abunda la producción agrícola y siendo considerada de las mejores.</p>
+                            <div class="btn-group">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <form action="homenajeEnamorados.html">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">VR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Columna de actividad agraria-->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/agricola.jpg"
+                            alt="agricola.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">La agricultura de secano tuvo la mayor relevancia, reflejando las
+                                antigüas diferencias sociales. Al momento de la recogida de la cosecha,
+                                los más humildes lo hacían de forma manual, mientras que otros lo recogian con
+                                maquinaria.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <form action="actividadAgraria.html">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">VR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Columna de casa de los camellos-->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/camellos.jpg"
+                            alt="camellos.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">Los camellos eran el transporte de los productos agrícolas tras
+                                intervenir en las actividades agrículas</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <form action="casaCamellos.html">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">VR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Tercera fila de la galeria-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                <!--Columna del Burro con algaba-->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/burro.jpg" alt="burro.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">Los burros ayudaban en el transporte de mercancía en los días
+                                asignados, vendiendola por dinero a las personas más pudiente. Las tiendecillas de
+                                aceite y vinagre eran los centros comerciales de aquellos momentos.</p>
+                            <div class="btn-group">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <form action="burroAlgaba.html">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">VR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Columna del pan de puño-->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/pan_de_puno.jpg"
+                            alt="pan-de-puno.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">En agüimes se cosechaba trigo morisco y trigo harinegro, con los
+                                cuales
+                                elbaoraban un pan de gran calidad,
+                                el cual les proporcionó fama. Estos panes se elaboraban con los puños en un
+                                lebrillo,
+                                por ellos, se le denominó "pan de puño".
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <form action="panPuno.html">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">VR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Columna del tablón de los enamorados-->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/homenaje_enamorados.jpg"
+                            alt="homenaje_enamorados.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">Las Heredades de Agua eran entidades que gestionaban la
+                                comercialización del agua.
+                                En este municipio existen dos: la de Los Parrales y la de Santa María. A esta última
+                                acudían los regantes para poner en hora sus relojes acorde al reloj de la Heredad
+                                para
+                                controlar las “horas de riego”</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <form action="homenajeEnamorados.html">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">VR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--cuarta fila de la galeria-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <!--Columna vacía-->
+                <div class="col"></div>
+                <!--Columan del homenaje al agricultor-->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="bd-placeholder-img card-img-top" height="225" src="img/agricultor.jpg"
+                            alt="agricultor.jpg" />
+
+                        <div class="card-body">
+                            <p class="card-text">El lugar en el que se encuentra la escultura del agricultor
+                                delimita el casco antiguo de la
+                                antigua zona agrícola. Esta obra se alza como acto de respeto a un estilo de vida
+                                que sustentó
+                                con esfuerzo a muchísimas generaciones.</p>
+                            <div class="btn-group">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <form action="homenajeAgricultor.html">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">VR</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Contacto-->
+    <div id="section3" class="container-fluid text-black" style="padding:100px 20px;">
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>¡Contáctanos!</h2>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="address">
+                                <i class="ri-map-pin-line"></i>
+                                <h4>Localidad:</h4>
+                                <p>Industrial José Sánchez Peñate, s/n, 35001 Las Palmas de Gran Canaria, Las Palmas</p>
+                            </div>
+
+                            <div class="email">
+                                <i class="ri-mail-line"></i>
+                                <h4>Email:</h4>
+                                <p>sabiosguiasinterpretes@gmail.com</p>
+                            </div>
+
+                            <div class="phone">
+                                <i class="ri-phone-line"></i>
+                                <h4>Llama a:</h4>
+                                <p>+34 987 54 32 48</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-8 mt-5 mt-lg-0">
+
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="Tu nombre" required>
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Tu Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto"
+                                    required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje"
+                                    required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Cargando</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Tu mensaje ha sido enviado. !Muchas gracias!</div>
+                            </div>
+                            <div class="text-center"><button type="submit">Enviar mensaje.</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--Canvas-->
+    <div class="navTool">
+		<p>Pasa el rato dibujando.</p>
+		<div class="options">
+			<p><a href="#" class="clean">Limpiar pizarra</a></p>
+		</div>
+	</div>
+	<canvas id="draw"></canvas>
+
+     <!--Footer-->
+     <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2022 Sabios Guías intérpretes</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
