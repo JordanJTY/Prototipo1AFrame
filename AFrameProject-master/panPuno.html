@@ -17,6 +17,7 @@
     <script src="js/change_scene.js"></script>
     <script src="js/components/go_exit.js"></script>
     <script src="js/components/show_menu.js"></script>
+    <script src="js/components/draw_vr_canvas.js"></script>
 </head>
 
 <body>
@@ -63,6 +64,7 @@
             <img id="preview-burro-algaba" src="img/burro_con_algaba.jpg" alt="burro-con-algaba">
             <img id="preview-agraria" src="img/actividad_agraria.jpg" alt="Actividad-agraria.jpg">
             <img id="preview-start" src="img/lobby.jpg" alt="lobby.jpg">
+            <canvas id="my-canvas"></canvas>
         </a-assets>
         <a-box id="my-box" class="clickable" material="src: #cuadritos" my-color="color: #ff0000;"
             my-opacity="opacity: 1;" position="0 0.4 15" scale="2 2 2" rotation="0 45 10"
@@ -70,10 +72,7 @@
             animation="property: rotation; to: 0 360 180; dir: alternate; loop: true; dur: 5000" go-exit>
         </a-box>
 
-        <a-text value="Exit" material="color: white" width="20" height="15" position="0 2.5 15" rotation="0 180 0"
-            align="center">
-            <a-plane material="color: black; side: double" width="2" height="1"></a-plane>
-        </a-text>
+        <a-plane class="clickable" width="2" height="1" material="src: #my-canvas; transparent: true" position="0 2.5 15" rotation="0 180 0" draw-vr-canvas></a-plane>
 
         <a-sky id="my-sky" material="src: #preview-pan-puno" sound="src: #audio; loop: true" data-sounding="false">
         </a-sky>
